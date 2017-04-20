@@ -53,7 +53,7 @@ export default function (options = {}, callback = function noop () {}) {
 
     if (specFiles.length) {
       protractorArgs = filterArgs(protractorArgs)
-      protractorArgs.push('--specs', specFiles.join(','))
+      protractorArgs.push('--failedSpecs', specFiles.join(','))
     }
 
     let protractor = spawn(
