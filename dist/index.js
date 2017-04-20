@@ -79,7 +79,7 @@ exports['default'] = function () {
 
     if (specFiles.length) {
       protractorArgs = filterArgs(protractorArgs);
-      protractorArgs.push('--specs', specFiles.join(','));
+      protractorArgs.push('--failedSpecs', specFiles.join(','));
     }
 
     var protractor = (0, _child_process.spawn)(parsedOptions.nodeBin, protractorArgs, parsedOptions.protractorSpawnOptions);
