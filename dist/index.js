@@ -81,7 +81,9 @@ exports['default'] = function () {
       protractorArgs = filterArgs(protractorArgs);
       protractorArgs.push('--failedSpecs', specFiles.join(','));
     }
-
+    
+    protractorArgs.push('--testAttempt', testAttempt);
+    
     var protractor = (0, _child_process.spawn)(parsedOptions.nodeBin, protractorArgs, parsedOptions.protractorSpawnOptions);
 
     protractor.stdout.on('data', function (buffer) {
